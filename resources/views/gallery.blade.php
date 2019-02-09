@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             @foreach($photos as $photo)
-                <img src="{{asset('/uploads/'.Auth::user()->id.'/'.$photo->name)}}" alt="" class="img-rounded">
+                <img src="{{asset($photo->path)}}" alt="" class="img-rounded">
             @endforeach
         </div>
     </div>
