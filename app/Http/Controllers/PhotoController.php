@@ -28,6 +28,7 @@ class PhotoController extends Controller
     	$photo = new Photo;
     	$photo->name= $pictureName;
     	$photo->user_id = Auth::user()->id;
+        $photo->path = '/uploads/'.Auth::user()->id.'/'.$pictureName;
     	$photo->save();
     	return back()->with('success','Image uploaded successfully');
     	// return redirect('/profile')->with('success','Profile picture uploaded');
